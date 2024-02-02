@@ -1,0 +1,23 @@
+Task 4, part 1: Report of min, avg and max round-trip times
+
+--- oslomet.no ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9015ms
+rtt min/avg/max/mdev = 3.741/6.767/13.413/2.824 ms
+
+--- ox.ac.uk ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9014ms
+rtt min/avg/max/mdev = 2.886/5.258/7.564/1.300 ms
+
+--- gaia.cs.umass.edu ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9014ms
+rtt min/avg/max/mdev = 161.899/166.005/181.099/5.173 ms
+
+--- sydney.edu.au ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9004ms
+rtt min/avg/max/mdev = 258.944/263.596/266.679/1.961 ms
+
+Task 4, part 2: Observed differences
+The minimum RTT for oslomet.no and ox.ac.uk are relatively similar, though it is a bit surprising that the uk website is slightly faster.
+ox.ac.uk was the fastest, followed closely by oslomet.no. This is not surprising since these two are in close proximity to where I ran the test.
+The server for gaia.cs.umass.edu is for the University of Massachusetts, and the information would have to travel across the Atlantic and back.
+Not surprisingly, the slowest was the one for Sydney, Australia. 
