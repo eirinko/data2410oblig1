@@ -1,7 +1,13 @@
 import sys
 #Should look more into unit testing in python.
+#Should have error handling
+#Look at what happens if no arguments are passed. Should give feedback? 
+
+
 
 def jfi(throughputlist):
+    if len(throughputlist)<2:
+        raise Exception("You need to add arguments after calling the jains.py")
     """
     >>> jfi(['bla',10,10,10])
     1.0
@@ -17,8 +23,8 @@ def jfi(throughputlist):
     return (numerator**2)/((len(throughputlist)-1)*denominator)
 
 listinput = sys.argv
-
-print(jfi(listinput))
+result = jfi(listinput)
+print(f'Jains Fairness index is: {result}')
 
 if __name__ == "__main__":
     import doctest
