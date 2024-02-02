@@ -20,7 +20,8 @@ for number in test_ip:
 #Check for the range of the port
 if args.port not in range(1024,65535):
     print("Invalid port. It must be within the range [1024,65535]")
-#Check for the format of the IP address
+#Check for the format of the IP address. 
+#If it doesn't contain 4 numbers or the numbers are out of range you get a error message.
 elif len(test_ip)!=4 or notinrange:
     print("Invalid IP. It must in this format: 10.1.2.3")
 else:
