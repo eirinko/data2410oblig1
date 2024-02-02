@@ -1,13 +1,7 @@
 import sys
-#Should look more into unit testing in python.
-#Should have error handling
-#Look at what happens if no arguments are passed. Should give feedback? 
-
-
 
 def jfi(throughputlist):
-    if len(throughputlist)<2:
-        raise Exception("You need to add arguments after calling the jains.py")
+    #Some unit tests
     """
     >>> jfi(['bla',10,10,10])
     1.0
@@ -16,15 +10,30 @@ def jfi(throughputlist):
     """
     numerator = 0
     denominator = 0
-    for i in range(1,len(throughputlist)):
-        number = int(throughputlist[i])
-        numerator += number
-        denominator += number*number
-    return (numerator**2)/((len(throughputlist)-1)*denominator)
+    n = 0
 
-listinput = sys.argv
-result = jfi(listinput)
-print(f'Jains Fairness index is: {result}')
+    for i in range(1,len(throughputlist)):
+        #Added a try/except in case of empty lines or lines not containing numbers
+        try:
+            number = int(throughputlist[i])
+            numerator += number
+            denominator += number*number
+            n+=1
+        except:
+            print(f"{throughputlist[i]} is not a value and will not be added")
+    if (n == 0 or denominator == 0):
+        raise ZeroDivisionError
+    return (numerator**2)/(n*denominator)
+
+try:
+    text = sys.argv[1] #Taking the input that comes after the name of the file.
+    with open(text) as f:
+        #Removes new line characters and adds info to a list.
+        lines = [line.rstrip() for line in f]
+    result = jfi(lines)
+    print(f'Jains Fairness index is: {result}')
+except:
+    print("Either you forgot to provide a file as input in the terminal or your file is empty.")
 
 if __name__ == "__main__":
     import doctest

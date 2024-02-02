@@ -1,4 +1,0 @@
-7 Mbps
-1200 Kbps
-15 Mbps
-32 Mbps

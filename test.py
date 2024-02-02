@@ -1,7 +1,11 @@
 import sys
 
-value1 = sys.argv[1]
-value2 = sys.argv[2]
-value3 = sys.argv[3]
+#from jains import *
 
-print(int(value1)+int(value2)+int(value3))
+text = sys.argv[1]
+with open(text) as f:
+    lines = [line.rstrip() for line in f]
+
+print(lines)
+
+#jfi(lines)
