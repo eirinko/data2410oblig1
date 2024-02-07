@@ -1,7 +1,7 @@
 Oblig 1:
 Task 1. 
-![image](https://github.com/eirinko/data2410oblig1/assets/31256905/09456881-cde8-492f-ae2d-491c934ef469)
 
+![image](https://github.com/eirinko/data2410oblig1/assets/31256905/09456881-cde8-492f-ae2d-491c934ef469)
 jains.py accepts arguments from the terminal. The list received from the terminal contains the name of the file and then all the other inputs, but all are strings. The function inside jains.py calculates the JFI, and prints the information to the terminal. 
 
 Task 2. 
