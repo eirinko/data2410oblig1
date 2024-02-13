@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser(description='simple args')
 #Adding arguments to the parser:
 parser.add_argument('-s' , '--server', action='store_true')
 parser.add_argument('-c' , '--client', action='store_true')
-parser.add_argument('-p', '--port', type=int, default=8088)
+parser.add_argument('-p', '--port', type=int, default=8088) 
 parser.add_argument('-i', '--ip', type=str, default="10.0.0.2")
 
 args = parser.parse_args()

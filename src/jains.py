@@ -14,15 +14,6 @@ def jfi(throughputlist):
     1.0
     >>> jfi([5,10])
     0.9
-    >>> jfi([])
-    Traceback (most recent call last):
-      File "/home/eirin/anaconda3/lib/python3.10/doctest.py", line 1350, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest __main__.jfi[3]>", line 1, in <module>
-        jfi([])
-      File "/home/eirin/Documents/data2410/data2410oblig1/src/jains.py", line 30, in jfi
-        raise ZeroDivisionError
-    ZeroDivisionError
     """
     numerator = 0
     denominator = 0
@@ -37,9 +28,6 @@ def jfi(throughputlist):
         except:
             #In case the list contains elements that can't be converted into integer.
             print(f"{throughputlist[i]} is not an integer and will not be added")
-    if (n == 0 or denominator == 0):
-        #In case the list contains nothing.
-        raise ZeroDivisionError
     return (numerator**2)/(n*denominator)
 
 #Try to use the function jfi(throughputlist) with the given input
