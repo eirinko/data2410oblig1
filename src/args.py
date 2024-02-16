@@ -15,11 +15,11 @@ args = parser.parse_args()
 test_ip = args.ip.split(".")
 notinrange = False
 for number in test_ip:
-    if int(number) not in range (0,255):
+    if int(number) not in range (0,256): # Assuming we want inclusive 0 and inclusive 255. 
         notinrange = True
 
-#First check for the range of the port
-if args.port not in range(1024,65535):
+#First check for the range of the port, assuming we want inclusive 1024 and inclusive 65535.
+if args.port not in range(1024,65536):
     print("Invalid port. It must be within the range [1024,65535]")
 #Then check for the format of the IP address. 
 #If it doesn't contain 4 numbers or the numbers are out of range you get a error message.
