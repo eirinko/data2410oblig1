@@ -10,7 +10,7 @@ Added a file called throughput_values.txt to the directory. Had to change the co
 
 ![image](https://github.com/eirinko/data2410oblig1/assets/31256905/f777f1f0-13c4-47eb-8f6d-7d885997e590)
 
-Function jfi(throughputlist) calculates the Jains Fairness index based on the input list. If the list contains information that’s not a number it will not be added (have used try: except). Also added a ZeroDivisionError in case the list doesn’t contain any numbers. 
+Function jfi(throughputlist) calculates the Jains Fairness index based on the input list. If the list contains information that’s not a number it will not be added (have used try: except). 
 
 Added a try:except for getting input from the terminal and calling the jfi-function. If no input file is provided an error text will be displayed. 
 
